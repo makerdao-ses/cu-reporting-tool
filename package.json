@@ -5,9 +5,16 @@
   "description": "Monthly Core Unit reports to be pushed to the Ecosystem Performance API",
   "private": true,
   "scripts": {
+    "watch": "babel --watch src --out-dir build --extensions \".ts,.tsx\"",
+    "build": "babel src --out-dir build --extensions \".ts,.tsx\"",
+    "tsc": "tsc",
+    "start": "npm run build && node ./build/main.js"
   },
   "devDependencies": {
-  },
-  "dependencies": {
+    "@babel/cli": "^7.18.10",
+    "@babel/core": "^7.19.1",
+    "@babel/preset-env": "^7.19.1",
+    "@babel/preset-typescript": "^7.18.6",
+    "typescript": "^4.8.3"
   }
 }
