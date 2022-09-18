@@ -1,8 +1,8 @@
 {
-  "name": "MakerDAO Core Unit Reporting Tool",
+  "name": "makerdao-cu-reporting-tool",
   "version": "1.1.0",
   "license": "AGPL-3.0",
-  "description": "Monthly Core Unit reports to be pushed to the Ecosystem Performance API",
+  "description": "Tool for Core Unit administrators to push their monthly reports to the Ecosystem Performance API.",
   "private": true,
   "scripts": {
     "watch": "babel --watch src --out-dir build --extensions \".ts,.tsx\"",
