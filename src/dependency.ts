@@ -2,4 +2,6 @@ const hello = (name:string):void => {
     console.log(`Hello ${name}!`);
 };
 
-export { hello };
+const add = (a:number, b:number): number => a + b;
+
+export { hello, add };

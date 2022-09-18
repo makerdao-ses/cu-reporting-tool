@@ -1,0 +1,7 @@
+{
+  "verbose": true,
+  "roots": [
+    "./test/"
+  ],
+  "preset": "ts-jest"
+}
