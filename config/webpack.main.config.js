@@ -5,40 +5,30 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const paths = {
     root: path.join(__dirname, '..'),
     config: path.join(__dirname, '.'),
-    src: path.join(__dirname, '../src'),
-    build: path.resolve(__dirname, '../build'),
+    src: path.join(__dirname, '../src/main'),
+    build: path.resolve(__dirname, '../build/main'),
     static: path.resolve(__dirname, '../static')
 };
 
 module.exports = {
     mode: 'development',
-    target: 'web',
+    target: 'electron-main',
 
     entry: {
-        main: paths.src + "/main.tsx"
+        main: paths.src + "/main.ts"
     },
 
     output: {
-        filename: '[name].bundle.js',
+        filename: 'main.js',
         path: paths.build
       },
 
     devtool: 'inline-source-map',
-    devServer: {
-        port: 8080,
-        hot: true,
-        // Folder for static files. Currently empty.
-        static: paths.static,   
-    },
 
     plugins: [
         new CleanWebpackPlugin({
             // Don't delete the .gitkeep file when cleaning the build folder
             cleanOnceBeforeBuildPatterns: ['**/*', '!.gitkeep']
-        }),
-        new HtmlWebpackPlugin({
-          title: 'MakerDAO Core Unit Reporting Tool',
-          template: paths.root + "/index.html",
         }),
       ],
 
@@ -59,9 +49,5 @@ module.exports = {
 
     resolve: {
       extensions: ['.tsx', '.ts', '.js'],
-    },
-
-    optimization: {
-      runtimeChunk: 'single',
     },
 }

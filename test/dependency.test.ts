@@ -1,4 +1,4 @@
-import { add } from '../src/dependency';
+import { add } from '../src/main/dependency';
 
 it('adds two numbers and returns the result', () => {
     const result = add(30, 12);
