@@ -5,11 +5,11 @@
   "description": "Tool for Core Unit administrators to push their monthly reports to the Ecosystem Performance API.",
   "private": true,
   "scripts": {
-    "watch": "babel --watch src --out-dir build --extensions \".ts,.tsx\"",
-    "build": "babel src --out-dir build --extensions \".ts,.tsx\"",
-    "tsc": "tsc",
+    "watch": "babel --watch src --out-dir build --extensions \".ts,.tsx\" --config-file ./config/babel.config.js",
+    "build": "babel src --out-dir build --extensions \".ts,.tsx\" --config-file ./config/babel.config.js",
+    "tsc": "tsc -p ./config/tsconfig.json",
     "start": "npm run build && node ./build/main.js",
-    "test": "jest -c ./jest.config.json"
+    "test": "jest -c ./config/jest.config.js"
   },
   "devDependencies": {
     "@babel/cli": "^7.18.10",
