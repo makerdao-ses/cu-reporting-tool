@@ -15,11 +15,12 @@ module.exports = {
     target: 'electron-main',
 
     entry: {
-        main: paths.src + "/main.ts"
+        main: paths.src + "/main.ts",
+        preload: paths.src + "/preload.ts",
     },
 
     output: {
-        filename: 'main.js',
+        filename: '[name].js',
         path: paths.build
       },
 
