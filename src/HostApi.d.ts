@@ -1,5 +1,5 @@
 declare global {
-    const electronHostApi: HostApi|undefined;
+    const electronHostApi: HostApi | undefined;
 }
 
 interface HostApi {
@@ -7,7 +7,8 @@ interface HostApi {
         node: () => string,
         chrome: () => string,
         electron: () => string,
-    }
+    },
+    hostType: () => string
 }
 
 export { HostApi };

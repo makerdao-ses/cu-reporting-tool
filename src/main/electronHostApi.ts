@@ -5,7 +5,8 @@ const electronHostApi= ():HostApi => ({
         node: () => process.versions.node,
         chrome: () => process.versions.chrome,
         electron: () => process.versions.electron,
-    }
+    },
+    hostType: () => 'electron'
 });
 
 export { electronHostApi };

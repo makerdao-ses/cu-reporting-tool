@@ -11,7 +11,8 @@ const browserHostApi = ():HostApi => ({
         node: () => 'n/a',
         chrome: () => getChromeVersion(),
         electron: () => 'n/a'
-    }
+    },
+    hostType: () => 'browser'
 });
 
 export { browserHostApi };

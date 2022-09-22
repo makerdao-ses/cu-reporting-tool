@@ -22,7 +22,7 @@ module.exports = {
     output: {
         filename: '[name].js',
         path: paths.build
-      },
+    },
 
     devtool: 'inline-source-map',
 
@@ -30,8 +30,8 @@ module.exports = {
         new CleanWebpackPlugin({
             // Don't delete the .gitkeep file when cleaning the build folder
             cleanOnceBeforeBuildPatterns: ['**/*', '!.gitkeep']
-        }),
-      ],
+        })
+    ],
 
     module: {
         rules: [
@@ -49,6 +49,6 @@ module.exports = {
     },
 
     resolve: {
-      extensions: ['.tsx', '.ts', '.js'],
+        extensions: ['.tsx', '.ts', '.js'],
     },
 }

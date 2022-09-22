@@ -39,7 +39,7 @@ module.exports = {
         new HtmlWebpackPlugin({
           title: 'MakerDAO Core Unit Reporting Tool',
           template: paths.src + "/index.html",
-        }),
+        })        
       ],
 
     module: {

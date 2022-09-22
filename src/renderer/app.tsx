@@ -9,6 +9,7 @@ import { browserHostApi } from "./browserHostApi";
 const hostApi:HostApi = typeof electronHostApi !== "undefined" ? electronHostApi : browserHostApi();
 
 console.log(`Node: ${hostApi.versions.node()}, Electron: ${hostApi.versions.electron()}, Chrome: ${hostApi.versions.chrome()}`);
+console.log('i am running ' + hostApi.hostType());
 
 const App = () => {
     return (
